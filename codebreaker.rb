@@ -49,7 +49,7 @@ code = "fx1=ZY&iX3=ZW&hm5=ZU&dg7=ZS&ei9=ZQ&ge11=ZO&tr13=ZM&hh15=ZK&uX17=ZI&si19=
 
 key = code.split("&") 
 # puts key_values
-nested_key_values = key_values.collect do |pairs|
+nested_key_values = key.collect do |pairs|
                        pairs.split("=") 
                     end
 # puts nested_key_values.inspect
@@ -72,8 +72,6 @@ end
 
 
 list2  = list.sort_by {|k,v| v}
-
-list2.flatten
 
 list3 = list2.flatten
 
@@ -116,7 +114,6 @@ msg2 =[]
 list5.each do |x|
     msg1 << x[0]
     msg2 << x[1]
-end
 end
 
 solution = msg1.join.gsub("X", " ")
